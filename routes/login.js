@@ -59,17 +59,8 @@ function executeStatement () {
               //res.send(token)
               res.render("menu");
             }
-            else
-
-            var token = jwt.sign({
-              name: req.body.username
-            }, "xyz")
-            req.session.token=token;
-            //res.send(token)
-            res.render("menu");
-
-            
-             // res.send("Clave Inválido", req.body.password, tabla[0].password);   
+            else       
+             res.send("Clave Inválido", req.body.password, tabla[0].password);   
             });
         else{
           res.send("Usuario NO encontrado");
