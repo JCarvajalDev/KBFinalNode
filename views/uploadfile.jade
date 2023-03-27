@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Subir Archivo
+  form(role='form' method='POST' action='/upload' enctype='multipart/form-data')
+    input#userInputFile(type="file", name="archivo")    
+    button.btn.btn-primary(type="submit", name="upload") Subir Archivo
+    
+     

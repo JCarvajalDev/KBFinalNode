@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    ul
+    table
+        thead 
+            tr 
+                th	BusinessEntityID
+                th	PersonType
+                th	NameStyle
+                th	Title
+                th	FirstName
+                th	MiddleName
+                th	LastName
+                th	Suffix
+                th	EmailPromotion
+                th	AdditionalContactInfo
+                th	Demographics
+                th	rowguid
+                th	ModifiedDate
+        tbody 
+            each item in datos
+                tr
+                    td	#{item.BusinessEntityID}
+                    td	#{item.PersonType}
+                    td	#{item.NameStyle}
+                    td	#{item.Title}
+                    td	#{item.FirstName}
+                    td	#{item.MiddleName}
+                    td	#{item.LastName}
+                    td	#{item.Suffix}
+                    td	#{item.EmailPromotion}
+                    td	#{item.AdditionalContactInfo}
+                    td	#{item.Demographics}
+                    td	#{item.rowguid}
+                    td	#{item.ModifiedDate}
+
+
+

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Listado de #{title} 
+  p Total de Registros #{totalregistro}
+  table(class='center')
+    tr
+      th Usuario
+      th Clave
+    each usuario in usuarios
+      tr
+        td= usuario.username
+        td= usuario.clave

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= title
+    p Listado de #{title}
+    form(role='form' method="POST" action="/useradd")
+        div.form-group
+            label(for="username") Nombre de usuario:
+            input(type="text" name="username" id="username" class="form-control" placeholder="Ingresa tu nombre de usuario")
+        div.form-group
+            label(for="password") Contraseña:
+            input(type="password" name="clave" id="clave" class="form-control" placeholder="Ingresa tu contraseña")
+
+        button.btn.btn-primary(type="submit" name="Grabar") Grabar
+    p #{respuesta}

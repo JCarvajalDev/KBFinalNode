@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1= title
+  p Listado de #{title}
+  div
+     a(href='/useradd')
+           
+  form(role='form' method='GET' action='/')
+    label(for='name') Buscar:
+        input#name.form-control(type='text', placeholder='texto' name='texto')
+        input(type='submit',value='Buscar')
+  div
+     table
+      thead
+        tr
+          th Nombre
+          th Apellido
+          th Editar
+          th Eliminar
+      tbody
+        each usuario in datos
+         tr
+          td #{usuario.nombre}
+          td #{usuario.apellido}
+          td 
+            a(href='/useredit?id='+usuario.id)
+              img(src='/images/pen.png')
+          td 
+            a(href='/userdel?id='+usuario.id)
+              img(src='/images/remove.png')
+
